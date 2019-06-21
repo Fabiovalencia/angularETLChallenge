@@ -1,0 +1,13 @@
+<h1>Listado de Actores:</h1>
+
+<form #actor="ngForm" (ngSubmit)="cargaActor(actor)">
+    <label for="name">Ingrese el actor:</label>
+    <input type="text" name="name" #name="ngModel" [(ngModel)]="actor.name" required>
+    <input type="submit" value="Buscar" [disabled]="!actor.form.valid">
+</form>
+
+<table>
+    <tr *ngFor="let item of movies">
+    <td>{{item}}</td>
+    </tr>
+</table>
